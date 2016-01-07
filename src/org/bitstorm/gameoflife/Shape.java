@@ -56,7 +56,7 @@ public class Shape {
 	/**
 	 * Get shape data.
 	 * Hide the shape implementation. Returns a anonymous Enumerator object.
-	 * @return enumerated shape data
+	 * @return numerated shape data
 	 */
 	public Enumeration getCells() {
 		return new Enumeration() {

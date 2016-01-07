@@ -48,7 +48,7 @@ public interface CellGrid {
 	public void resize( int col, int row );
 
 	/**
-	 * Get cell-enumerator. Enumerates over all living cells (type Cell).
+	 * Get cell-numerator. Enumerates over all living cells (type Cell).
 	 * @return Enumerator over Cell.
 	 * @see Cell
 	 */

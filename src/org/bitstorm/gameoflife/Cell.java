@@ -5,8 +5,9 @@ package org.bitstorm.gameoflife;
  * So it must be as small as possible.
  * Because every cell is pre-generated, no cells have to be generated when the Game Of Life playw.
  * Whether a cell is alive or not, is not part of the Cell-object.
+ * 
  * @author Edwin Martin
- *
+ * @author Roger Gouveia
  */
 public class Cell {
 	public final short col;
