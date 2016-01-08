@@ -183,6 +183,7 @@ public class CellGridCanvas extends Canvas {
 		}
 		g.drawImage(offScreenImageDrawed, 0, 0, null);
 		// draw populated cells
+		//FIXME escolher a cor baseado em lividity
 		g.setColor(Color.yellow);
 		Enumeration num = cellGrid.getEnum();
 		Cell c;
