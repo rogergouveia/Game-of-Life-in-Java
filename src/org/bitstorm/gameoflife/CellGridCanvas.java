@@ -182,15 +182,38 @@ public class CellGridCanvas extends Canvas {
 			}
 		}
 		g.drawImage(offScreenImageDrawed, 0, 0, null);
-		// draw populated cells
-		//FIXME escolher a cor baseado em lividity
-		g.setColor(Color.yellow);
+		// draw populated cells		
+		//g.setColor(Color.yellow);		
 		Enumeration num = cellGrid.getEnum();
 		Cell c;
 		while ( num.hasMoreElements() ) {
 			c = (Cell)num.nextElement();
+			g.setColor(getColorByNumNeighbours(c.neighbour));
 			g.fillRect(c.col * cellSize, c.row * cellSize, cellSize - 1, cellSize - 1);
 		}
+	}
+	
+	
+	/**
+	 * Método que calcula a cor da célula baseado
+	 * no número de neighbours.
+	 * 
+	 * @param numNeighbours
+	 * @return
+	 */
+	private Color getColorByNumNeighbours(byte numNeighbours){		
+		int red = 255;
+		int green = 255;
+		int blue = 0;
+		int darkerFactor = 25;
+		
+		for (byte i=1; i < numNeighbours ; i++){		
+			red = red - darkerFactor;
+			green = green - darkerFactor;
+		}
+		Color color = new Color(red,green,blue);
+	    	
+		return color;		
 	}
 	
 	/**

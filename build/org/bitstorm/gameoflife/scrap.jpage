@@ -1,0 +1,4 @@
+
+for (byte b=0; b < 20 ; b++){
+	System.out.println(b);
+}  
